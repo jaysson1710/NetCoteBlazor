@@ -1,0 +1,10 @@
+﻿<!--El otro modelo de bind esta en la hoja todo-->
+<h3>EnlaceDatos</h3>
+
+<div >@CurrentValue</div>
+
+<input @bind-value="CurrentValue" @bind-value:event="oninput" />
+
+@code {
+    private string CurrentValue { get; set; }
+}

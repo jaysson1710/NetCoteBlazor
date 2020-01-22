@@ -6,9 +6,16 @@
 
 <button class="btn btn-primary" @onclick="@IncrementCount">Click me</button>
 
+<div id="primario">@ChildContent</div>
+
+
 @code {
     int currentCount = 0;
-
+    
+    //https://docs.microsoft.com/es-es/aspnet/core/blazor/components?view=aspnetcore-3.1#child-content
+    //ejemplo de contenido secundario
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
     [Parameter]
     public int Incremento { get; set; }
 
