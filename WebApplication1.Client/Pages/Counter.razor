@@ -5,13 +5,17 @@
 <p>Current count: @currentCount</p>
 
 <button class="btn btn-primary" @onclick="@IncrementCount">Click me</button>
-
+<!--el padre es quien llama a este objeto
+    y desde alli se establece el contenidoque va en este elemento
+    <Counter Incremento="10" >Informacion adicional</Counter>
+    en ese caso en id primario va el texto.
+    -->
 <div id="primario">@ChildContent</div>
 
 
 @code {
     int currentCount = 0;
-    
+
     //https://docs.microsoft.com/es-es/aspnet/core/blazor/components?view=aspnetcore-3.1#child-content
     //ejemplo de contenido secundario
     [Parameter]
@@ -21,6 +25,6 @@
 
     void IncrementCount()
     {
-        currentCount = currentCount+Incremento;
+        currentCount = currentCount + Incremento;
     }
 }
